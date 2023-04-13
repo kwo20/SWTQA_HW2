@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 50%;
+        }
+
+        button {
+            margin-top: 1rem;
+            width: 100%;
+            padding: 0.5rem 0;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form action="/calculate" method="POST">
+            <div class="input-group">
+                <label for="height_feet">Height (feet):</label>
+                <input type="number" step="0.01" id="height_feet" name="height_feet" required>
+            </div>
+            <div class="input-group">
+                <label for="height_inches">Height (inches):</label>
+                <input type="number" step="0.01" id="height_inches" name="height_inches" required>
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (pounds):</label>
+                <input type="number" step="0.1" id="weight" name="weight" required>
+            </div>
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+</body>
+</html>
