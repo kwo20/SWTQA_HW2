@@ -76,13 +76,13 @@ class TestBMICalculator(unittest.TestCase):
     
   def test_bmi_calc(self):
         #Underweight tests
-        self.assertTrue(bmi_calc(6, 2, 120) == "Underweight" and bmi_calc(6,2,140) == "Underweight")
+        self.assertTrue(bmi_calc(6, 2, 120) == "underweight" and bmi_calc(6,2,140) == "underweight")
         #Normal tests
-        self.assertTrue(bmi_calc(6, 2, 141) == "Normal" and bmi_calc(6,2,150) == "Normal" and bmi_calc(6, 2, 189) == "Normal")
+        self.assertTrue(bmi_calc(6, 2, 141) == "normal" and bmi_calc(6,2,150) == "normal" and bmi_calc(6, 2, 189) == "normal")
         #Overweight tests
-        self.assertTrue(bmi_calc(6, 2, 190) == "Overweight" and bmi_calc(6, 2, 200) == "Overweight" and bmi_calc(6,2,227.5) == "Overweight")
+        self.assertTrue(bmi_calc(6, 2, 190) == "overweight" and bmi_calc(6, 2, 200) == "overweight" and bmi_calc(6,2,227.5) == "overweight")
         #Obese tests
-        self.assertTrue(bmi_calc(6, 2, 228) == "Obese" and bmi_calc(6, 2, 240) == "Obese")
+        self.assertTrue(bmi_calc(6, 2, 228) == "obese" and bmi_calc(6, 2, 240) == "obese")
 
     
 
