@@ -9,7 +9,7 @@ class TestBMICalculator(unittest.TestCase):
         original_input = mock.builtins.input
         #UNDER test (will return false)
         mock.builtins.input = lambda _: 0
-        self.assertTrue(height_inches_input('0') > 0 and height_inches_input('0') <= 12)
+        self.assertFalse(height_inches_input('0') > 0 and height_inches_input('0') <= 12)
         mock.builtins.input = original_input
         #MIN test
         mock.builtins.input = lambda _: 1
@@ -25,14 +25,14 @@ class TestBMICalculator(unittest.TestCase):
         mock.builtins.input = original_input
         #OVER test (will return false)
         mock.builtins.input = lambda _: 13
-        self.assertTrue(height_feet_input('13') > 0 and height_feet_input('13') <= 12)
+        self.assertFalse(height_feet_input('13') > 0 and height_feet_input('13') <= 12)
         mock.builtins.input = original_input
 
   def test_height_feet_input(self):
         original_input = mock.builtins.input
         #UNDER test (will return false)
         mock.builtins.input = lambda _: 0
-        self.assertTrue(height_feet_input('0') > 0 and height_feet_input('0') <= 8)
+        self.assertFalse(height_feet_input('0') > 0 and height_feet_input('0') <= 8)
         mock.builtins.input = original_input
         #MIN test
         mock.builtins.input = lambda _: 1
@@ -48,14 +48,14 @@ class TestBMICalculator(unittest.TestCase):
         mock.builtins.input = original_input
         #OVER test (will return false)
         mock.builtins.input = lambda _: 9
-        self.assertTrue(height_feet_input('9') > 0 and height_feet_input('9') <= 8)
+        self.assertFalse(height_feet_input('9') > 0 and height_feet_input('9') <= 8)
         mock.builtins.input = original_input
 
   def test_weight_input(self):
         original_input = mock.builtins.input
         #UNDER test (will return false)
         mock.builtins.input = lambda _: 0
-        self.assertTrue(weight_input('0') > 0 and weight_input('0') <= 1000)
+        self.assertFalse(weight_input('0') > 0 and weight_input('0') <= 1000)
         mock.builtins.input = original_input
         #MIN test
         mock.builtins.input = lambda _: 1
@@ -71,7 +71,7 @@ class TestBMICalculator(unittest.TestCase):
         mock.builtins.input = original_input
         #OVER test (will return false)
         mock.builtins.input = lambda _: 1001
-        self.assertTrue(weight_input('1001') > 0 and weight_input('1001') <= 1000)
+        self.assertFalse(weight_input('1001') > 0 and weight_input('1001') <= 1000)
         mock.builtins.input = original_input
     
   def test_bmi_calc(self):
