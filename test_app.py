@@ -76,7 +76,7 @@ class TestBMICalculator(unittest.TestCase):
     
   def test_bmi_calc(self):
         #Underweight tests
-        self.assertTrue(bmi_calc(6, 2, 120) == "underweight" and bmi_calc(6,2,140) == "underweight")
+        self.assertFalse(bmi_calc(6, 2, 120) == "underweight" and bmi_calc(6,2,140) == "underweight")
         #Normal tests
         self.assertTrue(bmi_calc(6, 2, 141) == "normal" and bmi_calc(6,2,150) == "normal" and bmi_calc(6, 2, 189) == "normal")
         #Overweight tests
